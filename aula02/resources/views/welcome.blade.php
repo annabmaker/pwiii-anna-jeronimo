@@ -12,7 +12,7 @@
     class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
     <div>
       <div class="text-xl font-medium text-black dark:text-white">Aula PWIII</div>
-      <p class="text-gray-500 dark:text-gray-400 uppercase">Programação Web 18/08/2025</p>
+      <p class="text-gray-500 dark:text-gray-400 uppercase">Programação Web 01/09/2025</p>
       <button class="bg-sky-500 rounded-xl hover:bg-sky-700 pt-3 pb-3 pb-5 pt-6 mt-10">Click me</button>
       <div class="grid grid-flow-col grid-rows-3 gap-4">
         <div class="row-span-2 row-start-2 font-serif border-4 bg-indigo-500 bg-clip-border p-3">Bem</div>
