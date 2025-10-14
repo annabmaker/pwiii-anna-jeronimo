@@ -1,17 +1,48 @@
-  <html>
+<html>
   <body>
     <div id="app"></div>
+
+    <!-- Ferramentas do React e o "Tradutor" Babel -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-   <script type="text/javascript">
-  const app = document.getElementById('app');
-  const header = document.createElement('h1');
-  const text = 'Develop. Preview. Ship.';
-  const headerContent = document.createTextNode(text);
-  header.appendChild(headerContent);
-  app.appendChild(header);
-</script>
+    
+    <!-- Seu código React com Componentes, Props e State -->
+    <script type="text/jsx">
+      const domNode = document.getElementById('app');
+      const root = ReactDOM.createRoot(domNode);
+
+      function Header({ title }) {
+        return <h1>{title ? title : 'Default Title'}</h1>;
+      }
+
+      function HomePage() {
+        const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+        
+        // 1. Criando a "memória" (state) para os likes, começando em 0.
+        const [likes, setLikes] = React.useState(0);
+
+        // 2. A função que atualiza a memória.
+        function handleClick() {
+          setLikes(likes + 1);
+        }
+
+        return (
+          <div>
+            <Header title="Develop. Preview. Ship." />
+            <ul>
+              {names.map((name) => (
+                <li key={name}>{name}</li>
+              ))}
+            </ul>
+            
+            {/* 3. O botão que chama a função e exibe o state atual. */}
+            <button onClick={handleClick}>Likes ({likes})</button>
+          </div>
+        );
+      }
+
+      root.render(<HomePage />);
+    </script>
   </body>
 </html>
